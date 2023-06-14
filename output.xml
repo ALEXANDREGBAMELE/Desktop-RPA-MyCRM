@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230601 14:08:24.034" rpa="true" schemaversion="3">
+<suite id="s1" name="Tasks" source="c:\Users\HP\Desktop\RPA\MyCRM\tasks.robot">
+<test id="s1-t1" name="Minimal task" line="6">
+<kw name="Windows Run" library="RPA.Windows">
+<arg>MyCRM.exe</arg>
+<tag>window</tag>
+<doc>Use Windows Run window to launch an application.</doc>
+<msg timestamp="20230601 14:08:24.834" level="INFO">Sending keys '{Win}r' to element: &lt;module 'uiautomation' from 'c:\\ProgramData\\robocorp\\ht\\d8717ac_b1f3c24_1c0bc041\\lib\\site-packages\\uiautomation\\__init__.py'&gt;</msg>
+<msg timestamp="20230601 14:08:25.412" level="INFO">Sending keys 'MyCRM.exe' to element: &lt;module 'uiautomation' from 'c:\\ProgramData\\robocorp\\ht\\d8717ac_b1f3c24_1c0bc041\\lib\\site-packages\\uiautomation\\__init__.py'&gt;</msg>
+<msg timestamp="20230601 14:08:26.060" level="INFO">Sending keys '{Enter}' to element: &lt;module 'uiautomation' from 'c:\\ProgramData\\robocorp\\ht\\d8717ac_b1f3c24_1c0bc041\\lib\\site-packages\\uiautomation\\__init__.py'&gt;</msg>
+<status status="PASS" starttime="20230601 14:08:24.833" endtime="20230601 14:08:29.610"/>
+</kw>
+<kw name="Click" library="RPA.Windows">
+<arg>id:tabControl1</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<msg timestamp="20230601 14:08:29.628" level="INFO">Getting element with locator: id:tabControl1</msg>
+<msg timestamp="20230601 14:08:29.899" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.PaneControl object at 0x0000023D07152310&gt;, locator=None, name='Bureau 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
+<msg timestamp="20230601 14:08:29.899" level="INFO">Locator 'id:tabControl1' produced matcher: MatchObject(locators=[('AutomationId', 'tabControl1', 0)], _classes=set(), max_level=0)</msg>
+<msg timestamp="20230601 14:08:30.689" level="INFO">Returning element: WindowsElement(item=&lt;uiautomation.uiautomation.TabControl object at 0x0000023D07152520&gt;, locator='id:tabControl1', name='', automation_id='tabControl1', control_type='TabControl', class_name='WindowsForms10.SysTabControl32.app.0.378734a', left=47, right=343, top=90, bottom=671, width=296, height=581, xcenter=195, ycenter=380)</msg>
+<status status="PASS" starttime="20230601 14:08:29.620" endtime="20230601 14:08:31.283"/>
+</kw>
+<kw name="Click" library="RPA.Windows">
+<arg>LegacyIAccessiblePattern.Name:Company</arg>
+<tag>action</tag>
+<tag>mouse</tag>
+<doc>Mouse click on element matching given locator.</doc>
+<msg timestamp="20230601 14:08:31.288" level="INFO">Getting element with locator: LegacyIAccessiblePattern.Name:Company</msg>
+<msg timestamp="20230601 14:08:31.295" level="INFO">Resulted root element: WindowsElement(item=&lt;uiautomation.uiautomation.PaneControl object at 0x0000023D07152430&gt;, locator=None, name='Bureau 1', automation_id='', control_type='PaneControl', class_name='#32769', left=0, right=1366, top=0, bottom=768, width=1366, height=768, xcenter=683, ycenter=384)</msg>
+<msg timestamp="20230601 14:08:31.296" level="WARN">Invalid locator strategy 'LegacyIAccessiblePattern.Name'! (assuming 'name')</msg>
+<msg timestamp="20230601 14:08:31.300" level="INFO">Locator 'LegacyIAccessiblePattern.Name:Company' produced matcher: MatchObject(locators=[('Name', 'LegacyIAccessiblePattern.Name:Company', 0)], _classes=set(), max_level=0)</msg>
+<msg timestamp="20230601 14:08:41.513" level="INFO">2023-06-01 14:08:41.512 locators.py[274] _get_control_from_params -&gt; Find Control Timeout(10s): {Name: 'LegacyIAccessiblePattern.Name:Company'}</msg>
+<msg timestamp="20230601 14:08:41.514" level="FAIL">ElementNotFound: Element not found with locator 'LegacyIAccessiblePattern.Name:Company'</msg>
+<status status="FAIL" starttime="20230601 14:08:31.287" endtime="20230601 14:08:41.523"/>
+</kw>
+<status status="FAIL" starttime="20230601 14:08:24.830" endtime="20230601 14:08:41.526">ElementNotFound: Element not found with locator 'LegacyIAccessiblePattern.Name:Company'</status>
+</test>
+<doc>Template robot main suite.</doc>
+<status status="FAIL" starttime="20230601 14:08:24.053" endtime="20230601 14:08:41.534"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tasks">Tasks</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230601 14:08:31.296" level="WARN">Invalid locator strategy 'LegacyIAccessiblePattern.Name'! (assuming 'name')</msg>
+</errors>
+</robot>
